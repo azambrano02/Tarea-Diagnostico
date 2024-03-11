@@ -28,13 +28,11 @@ public class Motocicletas extends Vehiculos{
         this.motor = motor;
         this.suspension = suspension;
     }
-    public int agregarStock(int stock){
-        return (stock+1);
-    }
-    public int quitarStock(int stock){
-        return (stock+1);
-    }
+
     public double velocidadMaxima(double hp, int peso){
         return (((hp*2)/peso)*20);
+    }
+    public TipoVehiculo getTipo(){
+        return TipoVehiculo.MOTOCICLETA;
     }
 }

@@ -43,6 +43,13 @@ public abstract class Vehiculos {
     public void setStock(int stock){
         this.stock = stock;
     }
+    public int agregarStock(){
+        return (stock+1);
+    }
+    public int quitarStock(){
+        return (stock-1);
+    }
+    public abstract TipoVehiculo getTipo();
     public Vehiculos(String marca, String modelo, int año, int peso, double precio, int stock){
         this.marca =marca;
         this.modelo = modelo;
