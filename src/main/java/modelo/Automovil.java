@@ -22,19 +22,18 @@ public class Automovil extends Vehiculos{
     public void setMotor(double motor){
         this.motor = motor;
     }
+
     public Automovil(String marca, String modelo, int año, int peso, double precio, int stock, double hp, int puertas, double motor){
         super(marca,modelo,año,peso,precio,stock);
         this.hp = hp;
         this.puertas = puertas;
         this.motor = motor;
     }
-    public int agregarStock(int stock){
-        return (stock+1);
-    }
-    public int quitarStock(int stock){
-        return (stock-1);
-    }
+
     public double velocidadMaxima(double hp, int peso){
         return ((hp/peso)*10);
+    }
+    public TipoVehiculo getTipo() {
+        return TipoVehiculo.AUTOMOVIL;
     }
 }

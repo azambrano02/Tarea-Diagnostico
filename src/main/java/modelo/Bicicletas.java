@@ -28,13 +28,11 @@ public class Bicicletas extends Vehiculos{
         this.fuerzaPedaleo = fuerzaPedaleo;
         this.velocidades = velocidades;
     }
-    public int agregarStock(int stock){
-        return (stock+1);
-    }
-    public int quitarStock(int stock){
-        return (stock+1);
-    }
+
     public double velocidadMaxima(double fuerzaPedaleo, int peso){
         return (((fuerzaPedaleo/peso)*100)+10);
+    }
+    public TipoVehiculo getTipo(){
+        return TipoVehiculo.BICICLETA;
     }
 }
