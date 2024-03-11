@@ -117,7 +117,6 @@ public class Automotriz {
             compra.mostrarDetallesCompra();
         }
     }
-
 }
 
 
