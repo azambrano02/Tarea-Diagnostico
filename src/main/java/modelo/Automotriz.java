@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-
 public class Automotriz {
     private List<Vehiculos> vehiculos;
     private List<Cliente> clientes;
@@ -93,21 +92,16 @@ public class Automotriz {
         }
         return null;
     }
-    public Vehiculos buscarVehiculosTipo(){
-        for(Vehiculos vehiculo : this.vehiculos){
-            if(vehiculo.getTipo().equals(TipoVehiculo.AUTOMOVIL)){
-                return vehiculo;
+    public List<Vehiculos> buscarVehiculosTipo(TipoVehiculo tipoVehiculo) {
+        List<Vehiculos> vehiculosTipo = new ArrayList<>();
+        for (Vehiculos vehiculo : this.vehiculos) {
+            if (vehiculo.getTipo().equals(tipoVehiculo)) {
+                vehiculosTipo.add(vehiculo);
             }
-            if(vehiculo.getTipo().equals(TipoVehiculo.MOTOCICLETA)){
-                return vehiculo;
-            }
-            if(vehiculo.getTipo().equals(TipoVehiculo.BICICLETA)){
-                return vehiculo;
         }
-        }
-        return null;
+        return vehiculosTipo;
     }
-    public void Compra(Cliente cliente, List<Vehiculos> vehiculos, String modelo) {
+    public void Compra(Cliente cliente, List<Vehiculos> vehiculos) {
         if (cliente != null && !vehiculos.isEmpty()) {
             Compra compra = new Compra(cliente, vehiculos, new Date());
             compras.add(compra);
